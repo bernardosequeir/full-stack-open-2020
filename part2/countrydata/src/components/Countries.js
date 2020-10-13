@@ -21,5 +21,3 @@ const Countries = ({ countries, search }) => {
 };
 
 export default Countries;
-
-REACT_APP_API_KEY = "ed641bd193ef202ca4887aefd6d2da95";
