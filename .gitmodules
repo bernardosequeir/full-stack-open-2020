@@ -1,0 +1,6 @@
+[submodule "part3/notes_backend"]
+	path = part3/notes_backend
+	url = https://github.com/bernardosequeir/notes_backend
+[submodule "part3/persons_backend"]
+	path = part3/persons_backend
+	url = https://github.com/bernardosequeir/persons_backend
