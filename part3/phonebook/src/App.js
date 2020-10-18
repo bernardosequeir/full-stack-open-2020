@@ -24,14 +24,21 @@ const App = () => {
     event.preventDefault();
     const newObject = { name: newName, phoneNumber: newNumber };
     if (persons.every((person) => person.name !== newName)) {
-      phoneService.create(newObject).then(() => {
-        setPersons(persons.concat(newObject));
-        setMessage(`Added ${newObject.name}`);
-        setMessageSuccess(true);
-        setTimeout(() => {
-          setMessage(null);
-        }, 2000);
-      });
+      phoneService
+        .create(newObject)
+        .then(() => {
+          setPersons(persons.concat(newObject));
+          setMessage(`Added ${newObject.name}`);
+          setMessageSuccess(true);
+        })
+        .catch((error) => {
+          console.log(error.response.data);
+          setMessage(error.response.data.error);
+          setMessageSuccess(false);
+          setTimeout(() => {
+            setMessage(null);
+          }, 5000);
+        });
     } else if (
       window.confirm(
         `${newName} is already added to the phonebook, replace the old number?`
