@@ -1,20 +1,19 @@
 const Note = require('../models/note')
 const User = require('../models/user')
+
 const initialNotes = [
   {
     content: 'HTML is easy',
-    date: new Date(),
     important: false
   },
   {
     content: 'Browser can execute only Javascript',
-    date: new Date(),
     important: true
   }
 ]
 
 const nonExistingId = async () => {
-  const note = new Note({ content: 'willremovethissoon', date: new Date() })
+  const note = new Note({ content: 'willremovethissoon' })
   await note.save()
   await note.remove()
 
