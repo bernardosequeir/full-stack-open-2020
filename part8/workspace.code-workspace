@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "phonebook-graphql"
+		},
+		{
+			"path": "library-frontend"
+		},
+		{
+			"path": "library-backend"
+		},
+		{
+			"path": "phonebook-backend"
+		},
+		{
+			"path": "../part4/notes_backend"
+		}
+	],
+	"remoteAuthority": "wsl+Ubuntu"
+}
