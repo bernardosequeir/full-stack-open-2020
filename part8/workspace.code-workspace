@@ -1,19 +1,25 @@
 {
 	"folders": [
 		{
-			"path": "phonebook-graphql"
+			"path": "../part9/first_steps_ts"
 		},
 		{
-			"path": "library-frontend"
+			"path": "../part9/bmi_calculator_ts"
 		},
 		{
-			"path": "library-backend"
+			"path": "../part9/ilari_project"
 		},
 		{
-			"path": "phonebook-backend"
+			"path": "../part9/patientor"
 		},
 		{
-			"path": "../part4/notes_backend"
+			"path": "../part9/patientor_backend"
+		},
+		{
+			"path": "../part9/my-app"
+		},
+		{
+			"path": "../part9/course-parts"
 		}
 	],
 	"remoteAuthority": "wsl+Ubuntu"
