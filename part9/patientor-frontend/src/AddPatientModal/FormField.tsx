@@ -1,11 +1,11 @@
 import React from "react";
 import { ErrorMessage, Field, FieldProps, FormikProps } from "formik";
 import { Dropdown, DropdownProps, Form } from "semantic-ui-react";
-import { Diagnosis, Gender } from "../types";
+import { Diagnosis } from "../types";
 
 // structure of a single option
-export type GenderOption = {
-  value: Gender;
+export type LabelValue = {
+  value: string | number;
   label: string;
 };
 
@@ -13,17 +13,19 @@ export type GenderOption = {
 type SelectFieldProps = {
   name: string;
   label: string;
-  options: GenderOption[];
+  options: LabelValue[];
+  handleChange?: (event: any) => void;
 };
 
 export const SelectField: React.FC<SelectFieldProps> = ({
   name,
   label,
-  options
+  options,
+  handleChange
 }: SelectFieldProps) => (
   <Form.Field>
     <label>{label}</label>
-    <Field as="select" name={name} className="ui dropdown">
+    <Field as="select" name={name} className="ui dropdown" onChange={handleChange}>
       {options.map(option => (
         <option key={option.value} value={option.value}>
           {option.label || option.value}
@@ -46,7 +48,7 @@ export const TextField: React.FC<TextProps> = ({
   <Form.Field>
     <label>{label}</label>
     <Field placeholder={placeholder} {...field} />
-    <div style={{ color:'red' }}>
+    <div style={{ color: 'red' }}>
       <ErrorMessage name={field.name} />
     </div>
   </Form.Field>
@@ -67,7 +69,7 @@ export const NumberField: React.FC<NumberProps> = ({ field, label, min, max }) =
     <label>{label}</label>
     <Field {...field} type='number' min={min} max={max} />
 
-    <div style={{ color:'red' }}>
+    <div style={{ color: 'red' }}>
       <ErrorMessage name={field.name} />
     </div>
   </Form.Field>
