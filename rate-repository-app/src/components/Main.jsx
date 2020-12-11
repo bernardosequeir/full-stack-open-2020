@@ -4,7 +4,7 @@ import RepositoryList from './RepositoryList';
 import AppBar from './AppBar';
 import SignIn from './SignIn';
 import theme from '../theme';
-import { Redirect, Route, Switch } from 'react-router-native';
+import { Route, Switch } from 'react-router-native';
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
