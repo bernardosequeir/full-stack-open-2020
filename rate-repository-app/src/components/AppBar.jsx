@@ -11,7 +11,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#25292C",
     alignContent: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'flex-start'
+  },
+  bar: {
+    display: "flex",
   },
   text: {
     color: "#FFFFFF"
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
 
 const AppBar = () => {
   return <View style={styles.container}>
-    <ScrollView horizontal>
+    <ScrollView contentContainerStyle={styles.container} horizontal>
       <AppBarTab tabName="Repository" to="/" />
       <AppBarTab tabName="Sign In" to="/login" />
     </ScrollView>
