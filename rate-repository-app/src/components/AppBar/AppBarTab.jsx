@@ -1,5 +1,5 @@
 import React from 'react';
-import Text from './Text';
+import Text from '../Text';
 import { Link } from 'react-router-native';
 import { StyleSheet, TouchableWithoutFeedback } from 'react-native';
 

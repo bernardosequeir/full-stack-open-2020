@@ -1,8 +1,8 @@
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
-import theme from '../theme';
-import ItemDescription from './ItemDescription';
-import Stats from './Stats';
+import { StyleSheet, View } from 'react-native';
+import theme from '../../theme';
+import ItemDescription from '../ItemDescription';
+import Stats from '../Stats';
 
 const styles = StyleSheet.create({
   container: {
