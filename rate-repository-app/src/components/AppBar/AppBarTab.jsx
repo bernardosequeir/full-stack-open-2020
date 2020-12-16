@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     marginRight: 10
   }
 });
-const AppBarTab = ({ tabName, to }) => (
-  <Link to={to} component={TouchableWithoutFeedback}>
+const AppBarTab = ({ tabName, to, onPress }) => (
+  <Link to={to} component={TouchableWithoutFeedback} onPress={onPress}>
     <Text style={styles.tab} fontSize="subheading" color="textLight">
       {tabName}
     </Text>
